@@ -4,45 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study in Georgia</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/style.css">
 
+    
 </head>
-  <!-- Header -->
-  <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">
-        <img src="/images/nav-logo.svg" alt="Logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#universities">Universities</a></li>
-          <li class="nav-item"><a class="nav-link" href="#student-life">Student life</a></li>
-        </ul>
-        <a href="#apply" class="btn btn-primary">Apply Now</a>
+
+<header class="header">
+  <div class="nav-container">
+    <a class="logo" href="#">
+      <img src="/images/nav-logo.svg" alt="Logo">
+    </a>
+    <!-- <button class="nav-toggle" id="navToggle">☰</button> -->
+    <nav class="nav" id="navbarNav">
+      <ul class="menu-bar">
+        <li><a href="#about">About Georgia</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#universities">Universities</a></li>
+        <li><a href="#student-life">Student life</a></li>
+        <li><a href="#student-life">Contact Us</a></li>
+      </ul>
+      <button href="#apply" class="btn">Apply Now</button>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Explore your future in Georgia</h1>
+    <p class="hero-content_plus">European-quality education, affordable living, vibrant culture</p>
+    <button href="#apply" id="btn-1" class="hero-btn btn">Apply Now</button>
+  </div>
+</section>
+
+<!-- Why Georgia -->
+<section class="why-georgia" id="about">
+  <h2>Why Choose Georgia?</h2>
+  <div class="content">
+    <div class="center-image">
+      <img src="/images/why-georgia.jpg" alt="Georgia">
+    </div>
+    <div class="features">
+      <div class="feature">
+        <h3>Quality Education</h3>
+        <p>World-class universities with European standards and international recognition</p>
+      </div>
+      <div class="feature">
+        <h3>Affordable Living</h3>
+        <p>Low cost of living with high quality lifestyle for international students</p>
+      </div>
+      <div class="feature">
+        <h3>Unique Student Life</h3>
+        <p>Rich cultural heritage, vibrant social scene, and unforgettable experiences</p>
+      </div>
+      <div class="feature">
+        <h3>Multicultural Environment</h3>
+        <p>Diverse international community with students from around the world</p>
+      </div>
+        <div class="feature">
+          <h3>Safe & Welcoming Country</h3>
+          <p>One of the safest countries in Europe with friendly, hospitable people</p>
+        </div>
+    </div>
+</section>
+
+<!-- What We Provide -->
+<section class="what-we-provide" id="services">
+  <h2>What We Provide</h2>
+  <p class="subtitle">Comprehensive support services to make your study abroad journey smooth and successful</p>
+  <div class="cards">
+    <div class="card">
+      <img src="/images/support.svg" alt="Application Support">
+      <h3>Application Support</h3>
+      <p>Complete assistance with university applications, document preparation, and admission process guidance</p>
+    </div>
+    <div class="card">
+      <img src="/images/visa.svg" alt="Visa and Legal Assistance">
+      <h3>Visa and Legal Assistance</h3>
+      <p>Expert help with student visa applications, legal documentation, and immigration procedures</p>
+    </div>
+    <div class="card">
+      <img src="/images/accomodation.svg" alt="Accommodation Support">
+      <h3>Accommodation Support</h3>
+      <p>Find the perfect housing options, from dormitories to private apartments, suited to your budget</p>
+    </div>
+    <div class="card">
+      <img src="/images/arrival.svg" alt="Arrival services">
+      <h3>Arrival services</h3>
+      <p>We provide airport pickup, bank account assistance and local orientation that aims to familiarize students with transportation and key locations.</p>
+    </div>
+    <div class="card">
+      <img src="/images/university.svg" alt="University Guidance">
+      <h3>University Guidance</h3>
+      <p>Personalized counseling to choose the right university and program that matches your career goals</p>
+    </div>
+  </div>
+</section>
+
+<!-- Start Journey -->
+<section class="start-journey" id="apply">
+  <h2>Start Your Journey</h2>
+  <p class="subtitle">Fill out the form below and our education consultants will contact you within 24 hours</p>
+  <form class="application-form">
+    <div class="form-group">
+      <label for="first_name">First Name</label>
+      <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
+    </div>
+    <div class="form-group">
+      <label for="last_name">Last Name</label>
+      <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
+    </div>
+    <div class="form-group">
+      <label for="country">Country</label>
+      <input type="text" id="country" name="country" placeholder="Enter your country" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+995 555 123 456" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+    </div>
+    <button type="submit" class="btn-submit">Submit Application</button>
+  </form>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="student-life">
+  <h2>Frequently Asked Questions</h2>
+  <p class="subtitle">Get answers to the most common questions about studying in Georgia</p>
+  <div class="faq-cards">
+    <div class="faq-card">
+      <h3>How can I apply?</h3>
+      <p>Our application process is simple and straightforward. Contact us to get started with your university application.</p>
+    </div>
+    <div class="faq-card">
+      <h3>Do I need a student visa?</h3>
+      <p>Yes, international students need a student visa. We provide complete assistance with visa applications and documentation.</p>
+    </div>
+    <div class="faq-card">
+      <h3>What programs are available?</h3>
+      <p>Georgia offers a wide range of programs including Medicine, Engineering, Business, IT, and Liberal Arts at various universities.</p>
+    </div>
+  </div>
+  <button class="btn-read_more">READ MORE &gt;</button>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Study in Georgia</h3>
+      <p>Your trusted partner for educational opportunities in Georgia. We help international students achieve their academic dreams with comprehensive support and guidance.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Information</h3>
+      <p>Tbilisi, Georgia</p>
+      <p><a href="mailto:info@studyingeorgia.com">info@studyingeorgia.com</a></p>
+      <p><a href="tel:+995555123456">+995 555 123 456</a></p>
+    </div>
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-links">
+        <a href="#"><img src="/images/whatsapp.svg" alt="WhatsApp"></a>
+        <a href="#"><img src="/images/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="/images/tiktok.svg" alt="TikTok"></a>
       </div>
     </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1 class="display-4 fw-bold">Explore your future in Georgia</h1>
-      <p class="lead">European-quality education, affordable living, vibrant culture</p>
-      <a href="#apply" class="btn btn-lg btn-primary mt-3">Apply Now</a>
-    </div>
-  </section>
+  </div>
+</footer>
 
 
 
 
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-</body>
+
+
+
+
+
+<script src="main.js"></script>
+    </body>
 </html>
