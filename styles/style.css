@@ -295,25 +295,66 @@ h2 {
 .start-journey {
   text-align: center;
   padding: 60px 20px;
-  background: white;
+  background: #afcff4;
 
   & p {
     margin: 0 0 40px 0;
   }
 }
 
+.form-container {
+  position: relative;
+  width: 100%;
+  padding: 60px 0;
+}
+
+.background-image {
+  position: absolute;
+  top: -20px;
+  left: 4%;
+  width: 77%;
+  z-index: 0;
+  opacity: 0.8; 
+}
+
 .application-form {
+  position: relative;
+  z-index: 1;
   max-width: 500px;
-  margin: 0 auto;
+  /* opacity: 0.9;  */
+  margin-left: auto; 
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.name{
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: space-between;  
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 .form-group {
   text-align: left;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+  min-width: 220px;
+}
+
+.form-group_radio{
+  text-align: left;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 3px;
+
+  & h4{
+    margin: 2px;
+  }
 }
 
 .form-group label {
