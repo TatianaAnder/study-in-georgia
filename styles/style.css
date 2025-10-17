@@ -10,11 +10,15 @@
 }
 
 .nav-container {
-  max-width: 1300px;
-  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .menu-bar {
@@ -58,7 +62,6 @@ a {
   color: black;
 }
 .menu-bar li:hover::before {
-  /* background: linear-gradient(to bottom, #e8edec, #d2d1d3); */
   box-shadow: 0px 3px 20px 0px #0077ff;
 
   transform: scale(1);
@@ -368,11 +371,6 @@ h2 {
   }
 }
 
-
-
-
-
-
 /* ===== FAQ ===== */
 .faq-section {
   text-align: center;
@@ -388,6 +386,7 @@ h2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 15px;
 }
 
 .faq-image {
@@ -456,16 +455,13 @@ h2 {
   margin-left: auto;
   color: #ff0000;
 
-  /* Переход всегда, в любом состоянии */
   transition: transform 0.4s ease-in-out;
 }
 
-/* При открытии — крестик */
 .faq-card.open .toggle-answer {
   transform: rotate(135deg);
 }
 
-/* Ответ — блок с текстом */
 .faq-answer {
   padding: 0 5px;
   max-height: 0;
@@ -474,7 +470,6 @@ h2 {
   transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
-/* Открытие — увеличиваем высоту и делаем видимым */
 .faq-card.open .faq-answer {
   max-height: 300px;
   opacity: 1;
@@ -487,76 +482,130 @@ h2 {
 
 /* ===== FOOTER ===== */
 .footer {
-  background: #222;
+  background: #535353;
   color: #eee;
-  padding: 40px 20px;
+  padding: 40px 70px;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: 0 auto;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
   gap: 30px;
 }
 
 .footer-column {
-  flex: 1;
-  min-width: 250px;
+  max-width: 340px;
+
+  & p {
+    margin: 2px;
+  }
+
 }
 
-.footer-column h3 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #fff;
+.footer-column address a {
+  position: relative;
+  padding-left: 25px;
+  padding-bottom: 5px;
+  display: inline-block;
+
+  &::before{
+    position: absolute;
+    left: 0;
+    right: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
-.footer-column a {
-  color: #ddd;
-  text-decoration: none;
+.footer-column address a[href^="https://maps.app.goo.gl/tV9Ui7XhMLeY2JhT8"]::before {
+  background-image: url(/images/location.svg);
+}
+
+.footer-column address a[href^="mailto:"]::before {
+  background-image: url(/images/email.svg);
+}
+
+.footer-column address a[href^="tel"]::before {
+  background-image: url(/images/tel.svg);
 }
 
 .social-links {
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 .social-links img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s ease;
+  width: 45px;
+  height: 45px;
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.5);
+  }
 }
 
-.social-links img:hover {
-  transform: scale(1.2);
-}
+
+
+
+
 
 /* ===== ADAPTIVE ===== */
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
+
+@media (max-width: 992px) {
+  .nav-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .logo img {
+    height: 32px;
   }
 
   .nav {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background: #111;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    padding: 20px 0;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 
-  .nav.active {
-    display: flex;
+  .menu-bar li {
+    padding: 8px 10px;
+    margin: 0 4px;
+    font-size: 14px;
   }
 
-  .nav-list {
-    flex-direction: column;
-    gap: 15px;
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .hero-content h1{
+    font-weight: 400;
   }
 }
 
+@media (max-width: 768px){
+
+  .content {
+    gap: 30px;
+  }
+  .footer{
+    padding: 10px 15px;
+  }
+  .footer-column {
+    max-width: 180px;
+    font-size: 14px;
+  }
+
+  .footer-column img {
+    width: 30px;
+  }
+
+}
