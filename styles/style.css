@@ -16,7 +16,7 @@
 }
 
 .logo img {
-  height: 40px;
+  height: 70px;
   width: auto;
   display: block;
 }
@@ -33,8 +33,7 @@
 .menu-bar li {
   list-style: none;
   color: white;
-  font-family: sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   padding: 12px 16px;
   margin: 0 8px;
   position: relative;
@@ -106,6 +105,15 @@ a {
   }
 }
 
+.menu-folded {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
 
 /* ===== HERO ===== */
 .hero {
@@ -152,9 +160,7 @@ a {
   }
 }
 
-/* ===== WHY GEORGIA ===== */
-.why-georgia {
-  text-align: center;
+section {
   padding: 60px 20px;
 }
 
@@ -166,6 +172,13 @@ h2 {
 h3 {
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   margin: 0 0 40px 0;
+}
+
+
+/* ===== WHY GEORGIA ===== */
+.why-georgia {
+  text-align: center;
+
 }
 
 .content {
@@ -207,6 +220,7 @@ h3 {
 }
 
 .feature {
+  /* border: 2px solid #013876; */
   position: relative;             
   padding: 8px 8px 8px 44px;        
   text-align: left;
@@ -256,7 +270,6 @@ h3 {
 /* ===== WHAT WE PROVIDE ===== */
 .what-we-provide {
   text-align: center;
-  padding: 60px 20px;
   background: #f9f9f9;
 }
 
@@ -296,7 +309,6 @@ h3 {
 /* ===== START JOURNEY ===== */
 .start-journey {
   text-align: center;
-  padding: 60px 20px;
 }
 
 .form-container {
@@ -381,7 +393,6 @@ h3 {
 /* ===== FAQ ===== */
 .faq-section {
   text-align: center;
-  padding: 60px 20px;
   background: #f9f9f9;
 }
 
@@ -567,7 +578,7 @@ h3 {
   .nav-container {
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 3px 20px;
   }
 
   .logo img {
@@ -592,28 +603,135 @@ h3 {
   .hero-content h1{
     font-weight: 400;
   }
+
+  .application-form {
+    font-size: 14px;
+    max-width: 400px;
+    max-height: 600px;
+  }
 }
 
+
+
 @media (max-width: 768px){
+section {
+  padding: 25px 15px;
+  }
+  .logo img {
+    height: 50px;
+  }
+
+  .menu-folded {
+    display: block;
+  }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .nav.active {
+    display: flex;
+  }
+  .menu-bar {
+    flex-direction: column;
+    padding: 0;
+  }
   .menu-bar li {
+    margin: 10px 0;
     font-size: 10px;
   }
-  .content {
-    gap: 30px;
-  }
+
   .btn{
     font-size: 10px;
   }
-
   .hero-content h1{
     font-weight: 200;
   }
+  .hero {
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+
+
+  .content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .features {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    height: 110px;
+
+  }
+
+  .feature{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    text-align: left;
+    padding-left: 50px;
+
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px 4px #0077ff;
+
+  }
+
+  .feature::before{
+    left: 5px;
+  }
+
+
+  .feature.active {
+    transform: translateX(0);
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    position: relative;
+    z-index: -1;
+  } 
+
+
+
+
+  
+  .center-image {
+    order: 2;
+    width: 100%;
+    margin: 20px auto 0;
+  }
+  .center-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+
+
+
+
 
   .application-form{
     font-size: 14px;
     max-width: 400px;
   }
-
 
   .footer{
     padding: 10px 15px;
@@ -622,9 +740,7 @@ h3 {
     max-width: 180px;
     font-size: 14px;
   }
-
   .footer-column img {
     width: 30px;
   }
-
 }

@@ -3,13 +3,47 @@
 
 
 const faqQuestions = document.querySelectorAll('.faq-question');
+const menuFolded = document.getElementById('menu-fold');
+const navigation = document.getElementById('navbarNav');
 
+//folded menu when screen is phone size
+menuFolded.addEventListener('click', ()=> {
+    navigation.classList.toggle('active');
+});
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const features = document.querySelectorAll(".feature");
+    let index = 0;
+
+    function showFeature(i) {
+      features.forEach((feature, idx) => {
+        feature.classList.toggle("active", idx === i);
+      });
+    }
+
+    showFeature(index); // показать первый
+
+    setInterval(() => {
+      index = (index + 1) % features.length;
+      showFeature(index);
+    }, 3000);
+  });
+
+
+
+
+//open/close answer to a FAQ
 faqQuestions.forEach(question => {
   question.addEventListener('click', () => {
     const card = question.parentElement;
     card.classList.toggle('open');
   });
 });
+
+
 
 
 
