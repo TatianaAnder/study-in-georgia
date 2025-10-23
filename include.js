@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('pages/header.html')
+    fetch('/header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header').innerHTML = data;
     });
 
 
-    fetch('pages/footer.html')
+    fetch('/footer.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('footer').innerHTML = data;
