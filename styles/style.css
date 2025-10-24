@@ -137,7 +137,6 @@ a {
   height: 100%;
   background: rgba(0,0,0,0.3);
   }
-
 }
 
 .hero-content {
@@ -887,3 +886,44 @@ blockquote {
 }
 
 
+/* services */
+
+.services{
+  background: url(/images/services-map2.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 90px;
+}
+
+.right, 
+.left {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.services-page .card {
+  background: rgba(83, 82, 82, 0.9);
+  color: #fff;
+  box-shadow: 4px 4px 4px #000000;
+  padding: 10px;
+  font-size: 14px;
+
+  & h4 {
+    font-size: 16px;
+  }
+}
+
+.services__text-before {
+  margin: 0 30px 5px;
+  text-align: center;
+}
+
+.services__text-after{
+  margin: 30px;
+  text-align: center;
+}
