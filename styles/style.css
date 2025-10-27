@@ -1024,6 +1024,50 @@ blockquote {
 }
 
 
+/* Courses page */
+.courses-page {
+margin-inline: 30px;
+}
 
+.courses-page section {
+  padding: 15px;
+  margin-bottom: 20vh;
+  border-radius: 12px;
+  box-shadow: 2px 4px 4px 4px #a2a1a1;
+  background: #dbdada43;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+
+  th, td {
+    padding: 0.8rem;
+    text-align: left;
+  }
+  ul {
+    margin: 0.5rem 0 1rem 1.5rem;
+  }
+}
+
+
+.content__courses {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10vw;
+}
+
+.content__courses-img {
+  max-width: 700px;
+  & img {
+    border-radius: 12px;
+  }
+}
 
 
