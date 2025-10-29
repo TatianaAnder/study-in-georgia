@@ -99,13 +99,9 @@ h5 {
 
 .nav-list a {
   text-decoration: none;
-  color: #ddd;
+  color: #dddddd;
   font-weight: 500;
   transition: color 0.3s ease;
-}
-
-.nav-list a:hover {
-  color: var(--clr-white);
 }
 
 .btn {
@@ -157,12 +153,9 @@ h5 {
 .hero-content {
   position: relative;
   z-index: 2;
-
   h1 {
       font-size: clamp(2rem, 6vw, 3.5rem);
       font-weight: 900;
-      margin-bottom: 15px;
-      line-height: 1.2;
   }
   & .hero-content_plus {
     margin: 15px 0;
@@ -179,7 +172,6 @@ h5 {
 /* ===== WHY GEORGIA ===== */
 .why-georgia {
   text-align: center;
-
 }
 
 .content {
@@ -194,7 +186,7 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 460px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(var(--clr-black) 0.7);
   filter: brightness(70%);
@@ -203,7 +195,6 @@ h5 {
   &:hover{
     filter: brightness(100%);
   }
-
   & img {
     border-radius: 12px;
   }
@@ -215,8 +206,8 @@ h5 {
   gap: 15px;
   max-width: 600px;
 
-  & h3 {
-    margin-bottom: 5px;
+  & h4 {
+    margin-bottom: 0;
   }
 }
 
@@ -224,6 +215,7 @@ h5 {
   position: relative;             
   padding: 8px 8px 8px 44px;        
   text-align: left;
+  margin-bottom: 15px;
 
   &::before {
     content: "";
@@ -249,7 +241,7 @@ h5 {
   }
 
   &:nth-child(2)::before{
-    background-image: url('/images/effordable.svg');
+    background-image: url('/images/affordable.svg');
   }
 
   &:nth-child(3)::before{
@@ -303,9 +295,6 @@ h5 {
 }
 
 
-
-
-
 /* ===== START JOURNEY ===== */
 .start-journey {
   text-align: center;
@@ -330,21 +319,16 @@ h5 {
   background-color: var(--clr-blue);
   position: relative;
   z-index: 1;
-  font-size: 18px;
   max-width: 500px;
-  /* opacity: 0.9;  */
   margin-left: auto; 
   padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .name{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;  
-  align-items: center;
-  margin-bottom: 5px;
 }
 
 .form-group {
@@ -352,18 +336,13 @@ h5 {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  /* min-width: 220px; */
 }
 
 .form-group_radio{
   text-align: left;
-  margin-bottom: 20px;
   display: flex;
-  gap: 3px;
-
-  & h4{
-    margin: 2px;
-  }
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
 .form-group label {
@@ -380,6 +359,7 @@ h5 {
   background: var(--clr-red);
   color: var(--clr-white);
   border: none;
+  margin-top: 25px;
   padding: 10px 18px;
   border-radius: 8px;
   cursor: pointer;
@@ -389,6 +369,7 @@ h5 {
     background: #013876;
   }
 }
+
 
 /* ===== FAQ ===== */
 .faq-section {
@@ -492,7 +473,7 @@ h5 {
 
 /* ===== FOOTER ===== */
 .footer {
-  background: #535353;
+  background: var(--clr-gray-dark);
   color: #eee;
   padding: 40px 70px;
 }
@@ -909,7 +890,7 @@ margin-inline: 30px;
   margin: 0;
   padding: 15px;
   border-radius: 12px;
-  box-shadow: 4px 4px 6px #414141;
+  box-shadow: 4px 4px 6px var(--clr-gray-dark);
   background-color: hsla(0, 0%, 22%, 0.071);
 }
 
