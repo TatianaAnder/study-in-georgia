@@ -1,5 +1,6 @@
 'use strict'
 
+
 function initMainScripts(){
   console.log('Main scripts are working');
 
@@ -11,9 +12,6 @@ function initMainScripts(){
   menuFolded.addEventListener('click', ()=> {
       navigation.classList.toggle('active');
   });
-
-
-
 
       const features = document.querySelectorAll(".feature");
       let index = 0;
@@ -48,10 +46,7 @@ function initMainScripts(){
 
 
 
-if (true) {
-    let blockVar = "Hello";
-}
-console.log(blockVar);
+
 
 
 

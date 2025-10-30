@@ -4,6 +4,10 @@
   --clr-gray-dark: #535353;
   --clr-blue: #49c5e4;  
   --clr-red: #de333b;   
+  --clr--light-grey: #38383812; /* background color for cards */
+  --clr--shade-grey: #5453534d; /* shade color for cards */
+  --clr--bg-white: #f9f9f9;  /* background color */
+  --clr--hover--blue: #013876;
 }
 
 
@@ -57,11 +61,15 @@ h5 {
   width: 100px;
 }
 
-.menu-bar {
-  height: fit-content;
-  display: inline-flex;
-
+.nav {
+  display: flex;
+  gap: 75px;
 }
+
+.menu-bar {
+  display: inline-flex;
+}
+
 .menu-bar li {
   font-weight: 600;
   padding: 12px 16px;
@@ -81,27 +89,7 @@ h5 {
 }
 
 .menu-bar li:hover::before {
-  box-shadow: 0 6px 6px -4px var(--clr-blue);
-}
-
-.nav {
-  display: flex;
-  gap: 75px;
-}
-
-.nav-list {
-  display: flex;
-  list-style: none;
-  gap: 50px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-list a {
-  text-decoration: none;
-  color: #dddddd;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  box-shadow: 0 6px 6px -4px var(--clr--hover--blue);
 }
 
 .btn {
@@ -112,7 +100,7 @@ h5 {
   transition: background 0.3s ease; 
 
   &:hover{
-    background: var(--clr-blue);
+    background: var(--clr--hover--blue);
   }
 }
 
@@ -146,7 +134,8 @@ h5 {
   left: 0;
   width: 100%; 
   height: 100%;
-  background: rgba(var(--clr-black) 0.3);
+  background: var(--clr-black);
+  opacity: 0.2;
   }
 }
 
@@ -172,6 +161,7 @@ h5 {
 /* ===== WHY GEORGIA ===== */
 .why-georgia {
   text-align: center;
+  
 }
 
 .content {
@@ -188,15 +178,15 @@ h5 {
   align-items: center;
   width: 460px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(var(--clr-black) 0.7);
-  filter: brightness(70%);
+  box-shadow: 0 4px 12px var(--clr-black);
+  filter: brightness(100%);
   transition: filter 0.2s ease;
 
-  &:hover{
-    filter: brightness(100%);
-  }
-  & img {
+  img {
     border-radius: 12px;
+  }
+  &:hover{
+    filter: brightness(70%);
   }
 }
 
@@ -262,7 +252,7 @@ h5 {
 /* ===== WHAT WE PROVIDE ===== */
 .what-we-provide {
   text-align: center;
-  background: #f9f9f9;
+  background: var(--clr--bg-white);
 }
 
 .cards {
@@ -277,20 +267,17 @@ h5 {
   border-radius: 12px;
   padding: 20px;
   width: 250px;
-  box-shadow: 4px 4px 4px 4px rgba(109, 160, 237, 0.3);
+  box-shadow: 0 4px 8px var(--clr--shade-grey);
   transition: transform 0.3s ease;
 
   & h4{
     margin-bottom: 45px;
   }
-
   &:hover{
     transform: translateY(-15px);
   }
-
   & img{
     margin: 0 auto 15px;
-    display: block;
   }
 }
 
@@ -317,9 +304,10 @@ h5 {
 
 .application-form {
   background-color: var(--clr-blue);
+  opacity: 0.95;
   position: relative;
   z-index: 1;
-  max-width: 500px;
+  max-width: 450px;
   margin-left: auto; 
   padding: 20px;
   border-radius: 12px;
@@ -351,22 +339,22 @@ h5 {
 
 .form-group input {
   padding: 12px 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 1px solid var(--clr--light-grey);
+  border-radius: 12px;
 }
 
 .btn-submit {
   background: var(--clr-red);
   color: var(--clr-white);
   border: none;
-  margin-top: 25px;
+  margin-top: 5px;
   padding: 10px 18px;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
   transition: background 0.3s ease;
 
   &:hover{
-    background: #013876;
+    background: var(--clr--hover--blue);
   }
 }
 
@@ -374,7 +362,7 @@ h5 {
 /* ===== FAQ ===== */
 .faq-section {
   text-align: center;
-  background: #f9f9f9;
+  background: var(--clr--bg-white);
 }
 
 .faq-content {
@@ -405,22 +393,21 @@ h5 {
 }
 
 .faq-card {
-  /* line-height: 1.2; */
-  background: #f9f9f9;
+   background: var(--clr-white);
   border-radius: 12px;
   padding: 5px;
   text-align: left;
-  box-shadow: 0 4px 8px rgba(84, 83, 83, 0.3);
+  box-shadow: 0 4px 8px var(--clr--shade-grey);
   transition: transform 0.3s ease;
 
   & h4 {
     margin: 0;
   }
-
   & p {
     margin: 0;
   }
 }
+
 .toggle-answer {
   background: none;
   border: none;
@@ -474,7 +461,7 @@ h5 {
 /* ===== FOOTER ===== */
 .footer {
   background: var(--clr-gray-dark);
-  color: #eee;
+  color: var(--clr-white);
   padding: 40px 70px;
 }
 
@@ -482,7 +469,6 @@ h5 {
   padding-bottom: 80px;
   display: flex;
   justify-content: space-around;
-  /* flex-wrap: wrap; */
   gap: 30px;
 }
 
@@ -492,7 +478,6 @@ h5 {
   & p {
     margin: 2px;
   }
-
 }
 
 .footer-column address a {
@@ -544,12 +529,12 @@ h5 {
     transform: scale(1.5);
   }
 }
+
 .footer-button {
   border-top: 1px solid var(--clr-white);
-  padding: 30px 0;
+  padding: 5px 0;
   text-align: center;
 }
-
 
 .radio-option{
   display: flex;
@@ -891,7 +876,7 @@ margin-inline: 30px;
   padding: 15px;
   border-radius: 12px;
   box-shadow: 4px 4px 6px var(--clr-gray-dark);
-  background-color: hsla(0, 0%, 22%, 0.071);
+  background-color: var(--clr--light-grey);
 }
 
 .about__assistant{
