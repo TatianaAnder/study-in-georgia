@@ -9,9 +9,15 @@ function initMainScripts(){
   const navigation = document.getElementById('navbarNav');
 
   //folded menu when screen is phone size
-  menuFolded.addEventListener('click', ()=> {
-      navigation.classList.toggle('active');
-  });
+  // menuFolded.addEventListener('click', ()=> {
+  //     navigation.classList.toggle('active');
+  // });
+
+
+menuFolded.addEventListener('click', () => {
+  navigation.classList.toggle('active');
+  menuFolded.classList.toggle('active'); // добавляем сюда
+});
 
       const features = document.querySelectorAll(".feature");
       let index = 0;
