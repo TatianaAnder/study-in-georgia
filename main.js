@@ -45,6 +45,8 @@ menuFolded.addEventListener('click', () => {
     });
   });
 
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+
 }
 
 
