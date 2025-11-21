@@ -9,26 +9,9 @@ function initMainScripts(){
   const navigation = document.getElementById('navbarNav');
 
   menuFolded.addEventListener('click', () => {
-  navigation.classList.toggle('active');
-  menuFolded.classList.toggle('active');
-});
-
-// slide feature when size less then 768
-  const features = document.querySelectorAll(".feature");
-  let index = 0
-  function showFeature(i) {
-    features.forEach((feature, idx) => {
-      feature.classList.toggle("active", idx === i);
-    });
-  
-    if (window.innerWidth < 768){
-      showFeature(index)
-      setInterval(() => {
-        index = (index + 1) % features.length;
-        showFeature(index);
-      }, 3000);
-    }
-
+    navigation.classList.toggle('active');
+    menuFolded.classList.toggle('active');
+  });
 
     //open/close answer to a FAQ
   faqQuestions.forEach(question => {
@@ -37,10 +20,28 @@ function initMainScripts(){
       card.classList.toggle('open');
     });
   });
+}
 
+// slide feature when size less then 768
+  const features = document.querySelectorAll(".feature");
+  let index = 0;
+  function showFeature(i) {
+    features.forEach((feature, idx) => {
+      feature.classList.toggle("active", idx === i);
+    });
+  }
+    if (window.innerWidth < 768){
+      showFeature(index);
+
+      setInterval(() => {
+        index = (index + 1) % features.length;
+        showFeature(index);
+      }, 3000);
+    }
+  
   window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
 
-}
+
 
 
 

@@ -573,6 +573,28 @@ article p {
   color: var(--clr-gray-dark);
 }
 
+.uni-logos {
+  display: flex;
+  justify-content: center;     /* центрируем ряд */
+  align-items: center;
+  gap: 40px;                   
+  padding: 20px 0;
+  flex-wrap: wrap;             
+}
+
+.uni-logos img {
+  height: 100px;              
+  object-fit: contain;        
+  filter: grayscale(100%); 
+  opacity: 0.8;
+  transition: .3s;
+}
+
+.uni-logos img:hover {
+  filter: grayscale(0%); 
+  opacity: 1;
+}
+
 .uni-img img {
   height: 475px;
   padding-bottom: 0.9rem;
