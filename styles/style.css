@@ -575,7 +575,7 @@ article p {
 
 .uni-logos {
   display: flex;
-  justify-content: center;     /* центрируем ряд */
+  justify-content: center;     
   align-items: center;
   gap: 40px;                   
   padding: 20px 0;
