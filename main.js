@@ -22,11 +22,12 @@ function initMainScripts() {
     menuFolded.classList.toggle('active');
   });
 
+
+// arrows
 const features = document.querySelector('.features');
 const featureCount = document.querySelectorAll('.feature').length;
 let currentIndex = 0;
 
-// Стрелки
 document.querySelector('.arrow.left').addEventListener('click', () => {
   if (currentIndex > 0) {
     currentIndex--;
@@ -45,7 +46,6 @@ function updateSlider() {
   features.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-// Свайп для мобильных
 let startX = 0;
 let isDragging = false;
 
@@ -72,69 +72,7 @@ features.addEventListener('touchend', e => {
   updateSlider();
 });
 
-
-  // const featuresContainer = document.querySelector(".features");
-  // if (featuresContainer && window.innerWidth < 768) {
-  //   const features = document.querySelectorAll(".feature");
-  //   let index = 0;
-  //   let intervalId;
-
-  //   function showFeature(i) {
-  //     features.forEach((feature, idx) => {
-  //       feature.classList.toggle("active", idx === i);
-  //     });
-  //   }
-
-  //   function startSlider() {
-  //     intervalId = setInterval(() => {
-  //       index = (index + 1) % features.length;
-  //       showFeature(index);
-  //     }, 3000);
-  //   }
-
-  //   function stopSlider() {
-  //     clearInterval(intervalId);
-  //   }
-
-
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach(entry => {
-  //         if (entry.isIntersecting) {
-  //           showFeature(index);
-  //           startSlider();
-  //         } else {
-  //           stopSlider();
-  //         }
-  //       });
-  //     },
-  //     { root: null, threshold: 0.1 }
-  //   );
-
-  //   observer.observe(featuresContainer);
-
-
-  //   let startX = 0;
-  //   featuresContainer.addEventListener('touchstart', (e) => {
-  //     startX = e.touches[0].clientX;
-  //   });
-
-  //   featuresContainer.addEventListener('touchend', (e) => {
-  //     let endX = e.changedTouches[0].clientX;
-  //     let diff = startX - endX;
-
-  //     if (Math.abs(diff) > 30) { 
-  //       if (diff > 0) {
-  //         index = (index + 1) % features.length;
-  //       } else {
-  //         index = (index - 1 + features.length) % features.length;
-  //       }
-  //       showFeature(index);
-  //     }
-  //   });
-  // }
-
-  // Форма
+  // form
   window.formbutton = window.formbutton || function () { (formbutton.q = formbutton.q || []).push(arguments) };
 }
 
