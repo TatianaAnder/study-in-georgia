@@ -62,7 +62,7 @@ h6 { font-size: clamp(0.81rem, 1.62vw, 0.96rem); margin-bottom: 3px; margin-top:
   justify-content: space-around;
   align-items: center;
   position: relative;
-   z-index: 10;
+  z-index: 10;
 }
 
 .logo img {
@@ -229,7 +229,6 @@ h6 { font-size: clamp(0.81rem, 1.62vw, 0.96rem); margin-bottom: 3px; margin-top:
   position: absolute;
   left: -10px;
   top: 30%;
-  transform: translateY(-50%);
   width: 40px;
   height: 40px;
   pointer-events: none;     
@@ -255,6 +254,10 @@ h6 { font-size: clamp(0.81rem, 1.62vw, 0.96rem); margin-bottom: 3px; margin-top:
 }
 .feature:nth-child(5)::before{
   background-image: url('/images/safe.svg');
+}
+
+.arrows {
+  display: none;
 }
 
 
@@ -288,6 +291,7 @@ h6 { font-size: clamp(0.81rem, 1.62vw, 0.96rem); margin-bottom: 3px; margin-top:
 .card:hover{
   transform: translateY(-15px);
 }
+
 .card img{
   margin: 0 auto 15px;
 }
@@ -450,6 +454,7 @@ h6 { font-size: clamp(0.81rem, 1.62vw, 0.96rem); margin-bottom: 3px; margin-top:
 .footer-column {
   max-width: 340px;
 }
+
 .footer-column p {
   margin: 2px;
 }
@@ -460,6 +465,7 @@ h6 { font-size: clamp(0.81rem, 1.62vw, 0.96rem); margin-bottom: 3px; margin-top:
   padding-bottom: 5px;
   display: inline-block;
 }
+
 .footer-column address a::before{
   position: absolute;
   left: 0;
@@ -577,21 +583,21 @@ article p {
   display: flex;
   justify-content: center;     
   align-items: center;
-  gap: 40px;                   
-  padding: 20px 0;
-  flex-wrap: wrap;             
+  gap: 50px;
+  padding: 30px 0;
+  flex-wrap: wrap;
 }
 
 .uni-logos img {
-  height: 100px;              
-  object-fit: contain;        
-  filter: grayscale(100%); 
+  height: 125px;
+  object-fit: contain;
+  filter: grayscale(100%);
   opacity: 0.8;
-  transition: .3s;
+  transition: filter .3s, opacity .3s;
 }
 
 .uni-logos img:hover {
-  filter: grayscale(0%); 
+  filter: grayscale(0%);
   opacity: 1;
 }
 
@@ -609,7 +615,7 @@ article p {
   padding: clamp(2rem, 5vw, 4rem);
   background: var(--clr-bg-white);
   max-width: 1400px;
-  margin-inline: auto; /* чтобы всё центрировалось по экрану */
+  margin-inline: auto;
 }
 
 .services .service {
@@ -730,6 +736,7 @@ article p {
 .about__assistant{
   width: 40vw;
 }
+
 .about__assistant img {
   border-radius: 12px;
 }
@@ -776,7 +783,6 @@ blockquote {
 
   .hero-content h1{
     margin-bottom: 10px;
-    /* font-weight: 400; */
   }
 
   .hero-content_plus {
@@ -797,6 +803,9 @@ blockquote {
 }
 
 
+
+
+
 @media (max-width: 768px){
   .main-page section {
     padding: 20px 10px;
@@ -810,8 +819,14 @@ blockquote {
     display: flex;
   }
 
+  .menu-folded .bar {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
   .nav {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 100%;
     left: 0;
@@ -820,12 +835,18 @@ blockquote {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 20px 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
   }
 
   .nav.active {
-    display: flex;
-    align-items: start;
+    align-items: start; 
+    max-height: 500px;
+    opacity: 1;
+    padding: 20px 0;
   }
 
   .menu-bar {
@@ -843,37 +864,38 @@ blockquote {
   }
 
   .nav-container {
-    box-shadow: 1px 6px 5px 4px var(--clr-shade-grey);
+    box-shadow: 1px 0 5px 2px var(--clr-shade-grey);
   }
 
   .hero {
-    height: 70vh;
+    height: 80vh;
     background-position: center;
-    background-size: cover;
     background-attachment: scroll;
   }
 
   .content {
+    display: flex;
     flex-direction: column;
-    gap: 10px;
+  }
+
+  .feature-dot__wrapper{
+    position: relative;
     overflow: hidden;
+    width: 100%;
   }
 
   .features {
-    width: 100%;
-    position: relative;
-    min-height: 130px;
+    transition: transform 0.5s ease;
+    flex-direction: row;
+    width: 500%;
+    max-width: 750px;
+    gap: 4vw;
   }
 
   .feature{
-    position: absolute;
+    flex: 0 0 95%; 
     top: 20px;
     width: 100%;
-    transform: translateX(100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    text-align: left;
     padding-left: 50px;
     border-radius: 12px;
     box-shadow: 6px 4px 5px var(--clr-shade-grey);
@@ -884,32 +906,51 @@ blockquote {
     left: 5px;
   }
 
-  .feature.active {
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
-  } 
-  
-  .center-image {
-    order: 2;
-    width: 85%;
-    margin: 5px auto;
+  .feature:hover::before {
+    transform: none;
   }
 
-  .faq-accordion {
-    gap: 8px;
-  }
+.arrows {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  background: var(--clr-light-grey);
+  color: var(--clr-black);
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+  border-radius: 8px;
+}
+  
+.center-image {
+  order: 2;
+  width: 85%;
+  margin: 5px auto;
+}
+
+.faq-accordion {
+  gap: 8px;
+}
 
   .footer{
     padding: 10px 15px;
   }
+
   .footer-column {
     max-width: 180px;
     font-size: 14px;
   }
+
   .footer-column img {
     width: 30px;
   }
+
+
 /* Courses page  */
   .content__courses-img img {
     padding-bottom: 10px;
@@ -954,27 +995,28 @@ blockquote {
     height: auto;
   }
 
+
   /* student life page */
   .list {
-    margin-inline: 20px; /* уменьшаем отступы по бокам */
+    margin-inline: 20px; 
   }
 
   .life-start {
-    flex-direction: column; /* блоки идут вертикально */
-    gap: 20px;             /* расстояние между блоками */
+    flex-direction: column; 
+    gap: 20px;             
     padding: 15px;
     margin: 30px 0;
   }
 
   .life-img img,
   .life-fig img {
-    max-height: none;      /* снимаем ограничение */
+    max-height: none;     
     width: 100%;
-    height: auto;          /* сохраняем пропорции */
+    height: auto;         
   }
 
   .life-bottom {
-    grid-template-columns: 1fr; /* одна колонка */
+    grid-template-columns: 1fr; 
     gap: 15px;
     padding: 10px;
   }
@@ -994,6 +1036,10 @@ blockquote {
     background-position: center;
     background-size: cover;
     background-attachment: scroll;
+  }
+
+  .features {
+    width: 100%;
   }
 
   .card {
@@ -1041,9 +1087,10 @@ blockquote {
     margin-top: 5vh;
   }
 
-  /* student life page */
+
+/* student life page */
   .life-page section {
-    margin-bottom: 10vh;  /* уменьшаем отступ снизу */
+    margin-bottom: 10vh; 
   }
 
   .life-start {
@@ -1052,16 +1099,27 @@ blockquote {
   }
 
   .life-bottom {
-    padding: 5px;
+    padding: 15px;
     gap: 10px;
   }
 
   .life-fig figcaption {
     padding: 8px;
-    font-size: 14px;       /* уменьшаем текст для маленьких экранов */
-    
+    font-size: 14px;        
   }
+
   figcaption h5, p {
     margin-bottom: 2px;
+  }
+
+  .uni-logos{
+    gap: 15px;
+
+  }
+
+  .uni-logos img {
+    height: 65px;
+    filter: grayscale(0%);
+    opacity: 1;
   }
 }
