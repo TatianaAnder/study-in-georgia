@@ -1,15 +1,4 @@
 User-agent: *
 Allow: /
 
-
-Disallow: /styles/
-Disallow: /images/
-Disallow: /*.md$
-Disallow: /*.txt$
-
-
-Allow: /*.js$
-Allow: /*.css$
-
-
 Sitemap: https://cari2ge.com/sitemap.xml
