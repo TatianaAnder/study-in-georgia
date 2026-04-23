@@ -11,7 +11,7 @@
     <meta property="og:title" content="Our Services — Cari2Ge Study in Georgia">
     <meta property="og:description" content="Discover the full range of support services provided by Cari2Ge: university guidance, visa help, accommodation, and arrival assistance.">
     <meta property="og:url" content="https://cari2ge.com/services.html">
-    <meta property="og:image" content="https://cari2ge.com/images/services-preview.jpg">
+    <meta property="og:image" content="https://cari2ge.com/images/services-map2.jpg">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Cari2Ge">
 
@@ -19,30 +19,37 @@
     <meta name="language" content="en">
 
     <script type="application/ld+json">
-      {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Cari2Ge",
-      "url": "https://cari2ge.com/",
-      "logo": "https://cari2ge.com/images/logo-search.png",
-      "sameAs": [
-        "https://www.instagram.com/cari2ge/",
-        "https://wa.me/995511132716",
-        "https://www.tiktok.com/@cari2ge",
-      ]
-      }
-    </script>
-
-    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "University Application Assistance, Visa Support, Accommodation Support",
-  "provider": {
-    "@type": "Organization",
-    "name": "Cari2Ge"
-  },
-  "url": "https://cari2ge.com/services.html"
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cari2ge.com/services.html#page",
+      "name": "Services — Study in Georgia Support",
+      "isPartOf": {
+        "@id": "https://cari2ge.com/#website"
+      },
+      "about": {
+        "@id": "https://cari2ge.com/#org"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://cari2ge.com/images/services-map2.jpg"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Study in Georgia Support Services",
+      "serviceType": [
+        "University Application Assistance",
+        "Visa Support",
+        "Accommodation Support"
+      ],
+      "provider": {
+        "@id": "https://cari2ge.com/#org"
+      }
+    }
+  ]
 }
 </script>
 
@@ -61,7 +68,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "Services",
-      "item": "https://cari2ge.com/services.html"
+      "item": "https://cari2ge.com/services.html#page"
     }
   ]
 }

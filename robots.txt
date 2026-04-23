@@ -1,15 +1,24 @@
 User-agent: *
 Allow: /
 
-# Отключаем от индексации технические и служебные файлы
-Disallow: /styles/
-Disallow: /images/
-Disallow: /*.md$
-Disallow: /*.txt$
+# Блокируем служебные и неинформативные файлы
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /README.md
 
-# JS можно индексировать — Google использует их для рендера
+# Блокируем технические файлы (если вдруг доступны по URL)
+Disallow: /*.json$
+Disallow: /*.log$
+Disallow: /*.md$
+
+# Разрешаем важные ресурсы для рендера
 Allow: /*.js$
 Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.svg$
 
 # Карта сайта для ускорения индексации
 Sitemap: https://cari2ge.com/sitemap.xml
