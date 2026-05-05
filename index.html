@@ -174,7 +174,11 @@
   <h3 class="subtitle">Fill out the form below and our education consultants will contact you within 24 hours</h3>
   <div class="form-container">
     <img src="/images/form-img.jpg" alt="Decorative" class="background-image">
-    <form class="application-form" autocomplete="on" action="https://formspree.io/f/xpwogwov" method="POST">
+    <form class="application-form" name="application" method="POST" data-netlify="true" autocomplete="on">
+      <input type="hidden" name="form-name" value="application">
+      <p style="display:none">
+        <label>Don’t fill this out: <input name="bot-field"></label>
+      </p>
       
     <div class="name">
       <div class="form-group">
