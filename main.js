@@ -72,8 +72,6 @@ features.addEventListener('touchend', e => {
   updateSlider();
 });
 
-  // form
-  window.formbutton = window.formbutton || function () { (formbutton.q = formbutton.q || []).push(arguments) };
 }
 
 
