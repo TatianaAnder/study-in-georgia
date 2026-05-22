@@ -189,14 +189,35 @@
         <label for="last_name"><strong>Last Name</strong></label>
         <input type="text" id="last_name" name="last_name" autocomplete="on" placeholder="Enter your last name" required minlength="2" maxlength="30" pattern="[A-Za-z\s]+">
       </div>
-      <div class="form-group">
-        <label for="country"><strong>Country</strong></label>
-        <input type="text" id="country" name="country" autocomplete="on" placeholder="Enter your country" required minlength="2" maxlength="30" pattern="[A-Za-z\s]+">
-      </div>
-      <div class="form-group">
-        <label for="phone"><strong>Phone Number</strong></label>
-        <input type="tel" id="phone" name="phone" autocomplete="on" placeholder="+995 555 123 456" pattern="^\+?[0-9\s\-\(\)]{7,20}$" required>
-      </div>
+      <!-- Country dropdown -->
+<div class="form-group country-dropdown-wrap">
+  <label for="country"><strong>Country</strong></label>
+  <div class="country-dropdown" id="countryDropdown">
+    <div class="country-input-box" id="countryBox" tabindex="0" role="combobox" aria-expanded="false">
+      <span class="country-flag" id="selectedFlag">🌍</span>
+      <span class="country-name-text" id="selectedName">Select your country</span>
+      <span class="country-chevron">▼</span>
+    </div>
+    <div class="dropdown-panel" id="dropdownPanel" role="listbox">
+      <input class="dropdown-search" id="countrySearch" placeholder="Search country…" autocomplete="off">
+      <div class="dropdown-list" id="countryList"></div>
+    </div>
+  </div>
+  <!-- hidden inputs for form submission -->
+  <input type="hidden" name="country" id="countryValue" required>
+  <input type="hidden" name="country_code" id="countryCodeValue">
+</div>
+
+<!-- Phone number -->
+<div class="form-group">
+  <label for="phone"><strong>Phone Number</strong></label>
+  <div class="phone-row">
+    <div class="phone-code-box" id="phoneCodeDisplay">—</div>
+    <input type="tel" id="phone" name="phone" class="phone-number-input"
+      placeholder="Select country first" disabled required
+      pattern="[0-9\s\-\(\)]{4,15}">
+  </div>
+</div>
     </div>
     <div class="form-group">
       <label for="email"><strong>Email Address</strong></label>
