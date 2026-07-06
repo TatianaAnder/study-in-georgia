@@ -2,8 +2,6 @@
 
 
 function initMainScripts() {
-  console.log('Main scripts are working');
-
   // FAQ
   const faqQuestions = document.querySelectorAll('.faq-question');
   faqQuestions.forEach(question => {

@@ -194,7 +194,7 @@
       </div>
       <!-- Country dropdown -->
 <div class="form-group country-dropdown-wrap">
-  <label id="country-label" for="countryBox"><strong>Country</strong></label>
+  <label id="country-label"><strong>Country</strong></label>
   <div class="country-dropdown" id="countryDropdown">
     <div class="country-input-box" id="countryBox" tabindex="0" role="combobox" aria-expanded="false" aria-labelledby="country-label">
       <span class="country-flag" id="selectedFlag">🌍</span>
@@ -217,6 +217,7 @@
   <div class="phone-row">
     <div class="phone-code-box" id="phoneCodeDisplay">—</div>
     <input type="tel" id="phone" name="phone" class="phone-number-input"
+      autocomplete="tel-national"
       placeholder="Select country first" disabled required
       pattern="[0-9\s\-\(\)]{4,15}">
   </div>
@@ -351,7 +352,7 @@
 
 
   <script src="include.js" defer></script>
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 
 </body>
 </html>
