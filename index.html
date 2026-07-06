@@ -88,6 +88,7 @@
 </head>
 <body class="main-page">
 <header id="header"></header>
+<main>
 <!-- Hero Section -->
 <section class="hero">
   <img src="/images/hero.webp" alt="" class="hero-bg" fetchpriority="high">
@@ -101,6 +102,7 @@
 <!-- Why Georgia -->
 <section class="why-georgia" id="about">
   <h2>Why Choose Georgia?</h2>
+  <h3 class="subtitle">Everything that makes Georgia a smart choice for international students</h3>
   <div class="content">
     <div class="center-image">
       <img src="/images/why-georgia.webp" alt="Georgia" loading="lazy">
@@ -192,9 +194,9 @@
       </div>
       <!-- Country dropdown -->
 <div class="form-group country-dropdown-wrap">
-  <label for="country"><strong>Country</strong></label>
+  <label id="country-label" for="countryBox"><strong>Country</strong></label>
   <div class="country-dropdown" id="countryDropdown">
-    <div class="country-input-box" id="countryBox" tabindex="0" role="combobox" aria-expanded="false">
+    <div class="country-input-box" id="countryBox" tabindex="0" role="combobox" aria-expanded="false" aria-labelledby="country-label">
       <span class="country-flag" id="selectedFlag">🌍</span>
       <span class="country-name-text" id="selectedName">Select your country</span>
       <span class="country-chevron">▼</span>
@@ -343,6 +345,7 @@
   </div>
 </section>
 
+</main>
 <footer id="footer"></footer>
 
 
