@@ -355,6 +355,12 @@ h6 { font-size: clamp(0.81rem, 1.62vw, 0.96rem); margin-bottom: 3px; margin-top:
   display: flex;
   gap: 15px;
   margin-bottom: 10px;
+  border: 0;
+  padding: 0;
+}
+
+.form-group_radio legend{
+  padding: 0;
 }
 
 .form-group label {
@@ -432,16 +438,18 @@ h6 { font-size: clamp(0.81rem, 1.62vw, 0.96rem); margin-bottom: 3px; margin-top:
 }
 
 .dropdown-item {
-  display: flex; 
-  align-items: 
+  display: flex;
+  align-items:
   center; gap: 10px;
-  padding: 9px 12px; 
-  cursor: pointer; 
+  padding: 13px 12px;
+  min-height: 44px;
+  box-sizing: border-box;
+  cursor: pointer;
   font-size: 14px;
 }
 
-.dropdown-item:hover, .dropdown-item.active { 
-  background: #f3f3ff; 
+.dropdown-item:hover, .dropdown-item:active, .dropdown-item.active {
+  background: #f3f3ff;
 }
 .dropdown-item .di-flag { 
   font-size: 20px; 
@@ -1037,8 +1045,14 @@ blockquote {
   color: var(--clr-black);
   border: none;
   cursor: pointer;
-  padding: 0 10px;
+  padding: 10px 16px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 8px;
+}
+
+.arrow:active {
+  background: var(--clr-shade-grey);
 }
   
 .center-image {
