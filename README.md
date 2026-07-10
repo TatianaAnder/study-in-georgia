@@ -16,13 +16,18 @@ zero tooling overhead — plain HTML/CSS/JS hosted on Netlify.
 
 ## Screenshots
 
-<p>
-  <img src="images/screenshots/desktop-1.jpg" alt="Desktop homepage hero" width="430">
-  <img src="images/screenshots/desktop-2.jpg" alt="Desktop application form" width="430">
+<p align="center">
+  <img src="images/screenshots/desktop-1.jpg" alt="Desktop homepage hero" width="420">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="images/screenshots/desktop-2.jpg" alt="Desktop application form" width="420">
 </p>
-<p>
-  <img src="images/screenshots/mobile-1.jpg" alt="Mobile homepage hero" width="200">
-  <img src="images/screenshots/mobile-2.jpg" alt="Mobile application form" width="200">
+
+<br>
+
+<p align="center">
+  <img src="images/screenshots/mobile-1.jpg" alt="Mobile homepage hero" width="190">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="images/screenshots/mobile-2.jpg" alt="Mobile application form" width="190">
 </p>
 
 ## Features
