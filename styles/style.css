@@ -1106,6 +1106,10 @@ blockquote {
   margin: 5px auto;
 }
 
+.subtitle {
+  margin-bottom: 50px;
+}
+
 .faq-accordion {
   gap: 8px;
 }
