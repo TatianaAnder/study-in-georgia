@@ -373,8 +373,34 @@ h6 { font-size: clamp(0.81rem, 1.62vw, 0.96rem); margin-bottom: 3px; margin-top:
   border-radius: 12px;
 }
 
+.consent-group {
+  margin-bottom: 20px;
+}
+
+.consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.consent-label input[type="checkbox"] {
+  margin-top: 3px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.consent-label a {
+  color: var(--clr-hover-blue);
+  text-decoration: underline;
+}
+
 /* Country dropdown */
-.phone-row { 
+.phone-row {
   display: flex; gap: 8px; 
 }
 
