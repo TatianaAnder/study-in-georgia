@@ -290,7 +290,8 @@ const cFlag = document.getElementById('selectedFlag');
 const cName = document.getElementById('selectedName');
 const cHidden = document.getElementById('countryValue');
 const cCodeHidden = document.getElementById('countryCodeValue');
-const phoneDisplay = document.getElementById('phoneCodeDisplay');
+const phoneCodeValue = document.querySelector('#phoneCodeDisplay .phone-code-value');
+const phoneCodeCountry = document.querySelector('#phoneCodeDisplay .phone-code-country');
 const phoneInput = document.getElementById('phone');
 
 function renderCountries(filter = '') {
@@ -311,7 +312,8 @@ function renderCountries(filter = '') {
       cName.textContent = name;
       cHidden.value = name;
       cCodeHidden.value = code;
-      phoneDisplay.textContent = code;
+      phoneCodeValue.textContent = code;
+      phoneCodeCountry.textContent = name;
       phoneInput.disabled = false;
       phoneInput.placeholder = '555 123 456';
       phoneInput.focus();

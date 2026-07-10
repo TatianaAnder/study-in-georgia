@@ -192,9 +192,9 @@
         <label for="last_name"><strong>Last Name</strong></label>
         <input type="text" id="last_name" name="last_name" autocomplete="on" placeholder="Enter your last name" required minlength="2" maxlength="30" pattern="[A-Za-z\s]+">
       </div>
-      <!-- Country dropdown -->
+      <!-- Country dropdown (phone code) -->
 <div class="form-group country-dropdown-wrap">
-  <label id="country-label"><strong>Country</strong></label>
+  <label id="country-label"><strong>Country Code</strong></label>
   <div class="country-dropdown" id="countryDropdown">
     <div class="country-input-box" id="countryBox" tabindex="0" role="combobox" aria-expanded="false" aria-labelledby="country-label">
       <span class="country-flag" id="selectedFlag">🌍</span>
@@ -215,7 +215,10 @@
 <div class="form-group">
   <label for="phone"><strong>Phone Number</strong></label>
   <div class="phone-row">
-    <div class="phone-code-box" id="phoneCodeDisplay">—</div>
+    <div class="phone-code-box" id="phoneCodeDisplay">
+      <span class="phone-code-value">—</span>
+      <span class="phone-code-country"></span>
+    </div>
     <input type="tel" id="phone" name="phone" class="phone-number-input"
       autocomplete="tel-national"
       placeholder="Select country first" disabled required
@@ -229,7 +232,7 @@
     </div>
     <div class="radio-option">
       <fieldset class="form-group_radio">
-        <legend><strong>Education</strong></legend>
+        <legend><strong>Current Education Level</strong></legend>
         <div class="education">
           <input type="radio" id="highschool" name="education" value="High school diploma" required>
           <label for="highschool">High School</label><br>
@@ -241,10 +244,29 @@
           <label for="other">Other</label>
         </div>
       </fieldset>
+      <fieldset class="form-group_radio">
+        <legend><strong>Preferred Contact Method</strong></legend>
+        <div class="contact-method">
+          <input type="radio" id="contact-whatsapp" name="contact_method" value="WhatsApp" required>
+          <label for="contact-whatsapp">WhatsApp</label><br>
+          <input type="radio" id="contact-email" name="contact_method" value="Email" required>
+          <label for="contact-email">Email</label>
+        </div>
+      </fieldset>
     </div>
     <div class="form-group">
       <label for="program_interest"><strong>Program of Interest</strong></label>
       <input type="text" id="program_interest" name="program_interest" placeholder="Write your program of interest" maxlength="50" required>
+    </div>
+    <div class="form-group">
+      <label for="intake"><strong>Desired Intake</strong></label>
+      <select id="intake" name="intake" required>
+        <option value="">Select intake</option>
+        <option value="Fall 2026">Fall 2026</option>
+        <option value="Spring 2027">Spring 2027</option>
+        <option value="Fall 2027">Fall 2027</option>
+        <option value="Not sure yet">Not sure yet</option>
+      </select>
     </div>
     <div class="form-group consent-group">
       <label class="consent-label">
