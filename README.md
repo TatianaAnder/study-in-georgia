@@ -14,6 +14,17 @@ zero tooling overhead — plain HTML/CSS/JS hosted on Netlify.
 - [Netlify](https://www.netlify.com/) — hosting, forms, redirects
 - Netlify Forms for the application form (spam honeypot + native validation)
 
+## Screenshots
+
+<p>
+  <img src="images/screenshots/desktop-1.jpg" alt="Desktop homepage hero" width="430">
+  <img src="images/screenshots/desktop-2.jpg" alt="Desktop application form" width="430">
+</p>
+<p>
+  <img src="images/screenshots/mobile-1.jpg" alt="Mobile homepage hero" width="200">
+  <img src="images/screenshots/mobile-2.jpg" alt="Mobile application form" width="200">
+</p>
+
 ## Features
 
 - Responsive layout, mobile nav, touch-swipeable feature carousel
